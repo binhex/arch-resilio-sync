@@ -31,6 +31,7 @@ EXPOSE 8888
 
 # expose port for incoming connection
 EXPOSE 55555
+EXPOSE 55555/udp
 
 # set permissions
 #################
