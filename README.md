@@ -1,20 +1,30 @@
-**Application**
+# Application
 
 [Resilio-Sync](https://www.resilio.com/individuals/)
 
-**Description**
+## Description
 
-Resilio Sync (formerly BitTorrent Sync) by Resilio, Inc. is a proprietary peer-to-peer file synchronization tool available for Windows, Mac, Linux, Android, iOS, Windows Phone, Amazon Kindle Fire and BSD. It can sync files between devices on a local network, or between remote devices over the Internet via a modified version of the BitTorrent protocol.
+Resilio Sync (formerly BitTorrent Sync) by Resilio, Inc. is a proprietary
+peer-to-peer file synchronization tool available for Windows, Mac, Linux,
+Android, iOS, Windows Phone, Amazon Kindle Fire and BSD. It can sync files
+between devices on a local network, or between remote devices over the Internet
+via a modified version of the BitTorrent protocol.
 
-Although not touted by the developers as an intended direct replacement nor competitor to cloud-based file synchronization services, it has attained much of its publicity in this potential role.This is mainly due to the ability of Resilio Sync to address many of the concerns in existing services relating to file storage limits, privacy, cost, and performance.
+Although not touted by the developers as an intended direct replacement nor
+competitor to cloud-based file synchronization services, it has attained much of
+its publicity in this potential role.This is mainly due to the ability of
+Resilio Sync to address many of the concerns in existing services relating to
+file storage limits, privacy, cost, and performance.
 
-**Build notes**
+## Build notes
 
 Latest GitHub stable release from Arch Linux AUR.
 
-**Usage**
-```
+## Usage
+
+```bash
 docker run -d \
+
     -p 8888:8888 \
     -p 55555:55555 \
     --name=<container name> \
@@ -24,18 +34,23 @@ docker run -d \
     -e UMASK=<umask for created files> \
     -e PUID=<uid for user> \
     -e PGID=<gid for user> \
+
     binhex/arch-resilio-sync
+
 ```
 
-Please replace all user variables in the above command defined by <> with the correct values.
+Please replace all user variables in the above command defined by <> with the
+correct values.
 
-**Access application**
+## Access application
 
 `http://<host ip>:8888`
 
-**Example**
-```
+## Example
+
+```bash
 docker run -d \
+
     -p 8888:8888 \
     -p 55555:55555 \
     --name=resilio-sync \
@@ -45,16 +60,21 @@ docker run -d \
     -e UMASK=000 \
     -e PUID=0 \
     -e PGID=0 \
+
     binhex/arch-resilio-sync
-```
-
-**Notes**
-
-User ID (PUID) and Group ID (PGID) can be found by issuing the following command for the user you want to run the container as:-
 
 ```
+
+## Notes
+
+User ID (PUID) and Group ID (PGID) can be found by issuing the following command
+for the user you want to run the container as:-
+
+```bash
 id <username>
+
 ```
+
 ___
 If you appreciate my work, then please consider buying me a beer  :D
 
