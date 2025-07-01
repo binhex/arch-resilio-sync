@@ -24,7 +24,6 @@ Latest GitHub stable release from Arch Linux AUR.
 
 ```bash
 docker run -d \
-
     -p 8888:8888 \
     -p 55555:55555 \
     --name=<container name> \
@@ -34,9 +33,7 @@ docker run -d \
     -e UMASK=<umask for created files> \
     -e PUID=<uid for user> \
     -e PGID=<gid for user> \
-
     binhex/arch-resilio-sync
-
 ```
 
 Please replace all user variables in the above command defined by <> with the
@@ -50,7 +47,6 @@ correct values.
 
 ```bash
 docker run -d \
-
     -p 8888:8888 \
     -p 55555:55555 \
     --name=resilio-sync \
@@ -60,9 +56,7 @@ docker run -d \
     -e UMASK=000 \
     -e PUID=0 \
     -e PGID=0 \
-
     binhex/arch-resilio-sync
-
 ```
 
 ## Notes
@@ -72,7 +66,6 @@ for the user you want to run the container as:-
 
 ```bash
 id <username>
-
 ```
 
 ___
